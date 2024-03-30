@@ -46,7 +46,8 @@ public class MyMap<T1, T2> {
         if (keys.size() == 0)
             System.out.println("Empty.");
         for (int i = 0; i < keys.size(); i++) {
-            System.out.println(String.format("{ %s } : %d", keys.get(i), values.get(i)));
+            // System.out.println(String.format("{ %s } : %d", keys.get(i), values.get(i)));
+            System.out.println(keys.get(i) + " : " + values.get(i));
         }
     }
 }

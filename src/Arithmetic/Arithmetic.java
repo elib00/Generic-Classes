@@ -5,8 +5,13 @@ public class Arithmetic<T1, T2> {
     private T2 num2;
 
     public Arithmetic(T1 num1, T2 num2) {
+        // para naa lay error nga chada
         if (!(num1 instanceof Number) || !(num2 instanceof Number)) {
-            throw new IllegalArgumentException("Invalid types!");
+            throw new IllegalArgumentException("Invalid type detected!");
+        }
+
+        if (num1.getClass().equals(num2.getClass())) {
+            throw new IllegalArgumentException("Types must be different!");
         }
 
         this.num1 = num1;
